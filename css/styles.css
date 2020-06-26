@@ -1,0 +1,196 @@
+* {box-sizing: border-box;}
+
+/* Style the navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: static;
+  float: none;
+  width:100%;
+ 
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: static;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  background-color:  rgb(117, 117, 117);
+  
+}
+
+/* Active/current link */
+.topnav a.active {
+    background-color: rgb(117, 117, 117);
+    color:white;
+  
+}
+.topnav a:hover:not(.active){
+    background-color: black;
+    color:white;
+}
+
+/* Style the input container */
+.topnav .login-container {
+
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+  float: none;
+}
+
+/* Style the button inside the input container */
+.topnav .login-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container button:hover { /*changing the color of the button when hovering of it */
+  background-color:  rgb(117, 117, 117);
+}
+
+
+.row{ /*Each row in has a grey solid border */
+    border-style: solid;  
+    border: 3px rgb(117, 117, 117);
+
+}
+.tableDescription td{
+    padding: 20px;
+}
+
+.container {  /*centering container */
+    padding-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.container-fluid{/*using a animation effect to change the background  */
+    padding-top: 50px;
+    background:whitesmoke;
+    animation: mymove 10s infinite;
+
+}
+.container-fluid.none{
+animation:none;
+}
+
+.img-responsive{/*adding border to every image*/
+    width:250px;
+    height:250px;
+    border: gray;
+    border-style: solid;
+    padding:5px;
+    
+}
+
+.text-info{
+    padding:10px;
+}
+.zoom {/*zoom in effect when hovering over img*/
+    padding: 50px;
+    
+    transition: transform .2s; /* Animation of picture when zooming in */
+    filter: none;
+    margin: 0 auto;
+}
+.btn.btn-primary{
+   padding-bottom:5px;
+   margin-bottom: 5px;
+   
+}
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    filter:none;
+}
+@keyframes mymove {/*Selecting which colour the back ground starts from and changes to*/
+    from {background-color:grey;}
+    to {background-color:whitesmoke;}
+    
+  }
+/*footer text color*/
+.footer-copyright.text-center.py-3{/*footer text color*/
+    color: white;
+}
+/*footer text color*/
+.footer-copyright.text-center.py-3 a{
+    color: white;
+}
+/*blur effect*/
+#blur{
+    filter: blur(5px);
+}
+
+.card-text{
+    font-style: italic;
+    color:darkgrey;
+}
+/*h5 element font and colour change*/
+h5{
+    font-family:verdana;
+    color: blue;
+}
+/*grey scale effect for image*/
+#greyscale{
+    -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+    
+}
+/*landing page dd element and table data text color*/
+dd a,td a{
+  color:black;font-weight: bold;
+}
+.card.edit{
+  width: 1000px;
+  
+}
+.row.edit{
+  padding-bottom: 20px;
+}
+.card-header,.card-title{
+  color:black;
+}
+.img-thumbnail{
+  width: 100px;
+  height: 100px;
+}
+.btn.btn-danger.edit{
+  float:right;
+}
+#accordion ul {
+	list-style: none;
+	padding: 0 0 0 0;
+}
+#accordion ul{
+	display: none;
+}
+
+#accordion {
+	list-style: none;
+	padding: 0 0 0 0;
+
+}

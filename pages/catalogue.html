@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  
+  <!--Links to bootstrap scripts for collapsable text areat-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  
+</head>
+
+<body class="bg-light">
+
+  <!--topnav start-->
+  <div class="topnav">
+    <a href="landing.html" target="_self">Home</a>
+    <a href="catalogue.html" target="_self" class="active">Catalogue</a>
+    <a href="shipping.html" target="_self">Shipping</a>
+    <a style="float:right;" href="about.html" target="_self">About</a>
+    <a href="cart.html" style="float:right;" id="cartNav"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+    <div class="login-container">
+      <form action="#">
+        <input type="text" placeholder="Username" name="username">
+        <input type="text" placeholder="Password" name="psw">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <!--topnav end-->
+
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      
+      <div class="col-sm-4-auto"><!--Starting  for item in catalogue-->
+        <div class="card mb-3" style="max-width: 400px;">
+          <h5 class="card-title text-info">R 600</h5>
+          <div class="row no-gutters justify-content-center auto">
+            <div class="col-md-4-auto">
+              <div class="zoom"><!--Zoom css for hover state over image-->
+                <img src="../images/shoes.jpg" class="img-responsive" alt="shoe" id="Blue-exersice-Shoes"><!--image-->
+              </div>
+            </div>
+            <div class="col-md-8-auto">
+              <div class="card-body">
+                <h5 class="card-title" id="titleShoes">Running shoes</h5>
+                <p class="card-text">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo0">Info</button>
+                  <button class="btn btn-info add" onclick="Add('Shoes',600,document.getElementById('demo0').textContent,document.getElementById('Shoes').value,document.getElementById('Blue-exersice-Shoes'))" > <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                  <button class="btn btn-light" onclick="Increase('Shoes')"><i class="fa fa-plus"></i></button>
+                  <input type="text" value='0' id="Shoes" style="width: 10%;">
+                  <button class="btn btn-light" onclick="Decrease('Shoes')"><i class="fa fa-minus"></i></button>
+                  <!--Hidden info section-->
+                  <div id="demo0" class="collapse">
+                    Blue Running shoes for Women<br>
+                    Comes in 7,8,9 
+                  </div>
+                </p>
+                <p class="card-text"><small class="text-muted">In Stock</small></p><!--muted text for in stock text-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--End of an item in catalogue-->
+      
+      <div class="col-sm-4-auto">
+        <div class="card mb-3" style="max-width: 400px;">
+          <h5 class="card-title text-info">R 3000</h5>
+          <div class="row no-gutters justify-content-center auto">
+            <div class="col-md-4-auto">
+              <div class="zoom">
+                <img src="../images/watch.jpg" class="img-responsive" id='dress-wear-watch'alt="Watch">
+              </div>
+            </div>
+            <div class="col-md-8-auto">
+              <div class="card-body">
+                <h5 class="card-title">Dress wear watch</h5>
+                <p class="card-text">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Info</button><!--Info button-->
+                  <button class="btn btn-info add" onclick="Add('Watch',3000,document.getElementById('demo1').textContent,document.getElementById('watch').value,document.getElementById('dress-wear-watch'))" > <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                  <button class="btn btn-light" onclick="Increase('watch')"><i class="fa fa-plus"></i></button>
+                  <input type="text" value='0' id="watch" style="width: 10%;">
+                  <button class="btn btn-light" onclick="Decrease('watch')"><i class="fa fa-minus"></i></button>
+                  <!--Hidden info section-->
+                  <div id="demo1" class="collapse">
+                    Full metal frame with blue lether straps.<br>
+                    Tailer made by craftsment   
+                  </div>
+                </p>
+                <p class="card-text"><small class="text-muted">In Stock</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4-auto">
+        <div class="card mb-3" style="max-width: 400px;">
+          <h5 class="card-title text-info">R 800</h5>
+          <div class="row no-gutters justify-content-center auto">
+            <div class="col-md-4-auto">
+              <div class="zoom" >
+                <img  id="greyscale" src="../images/headphones.jpg" class="img-responsive" alt="Headphone " id="BeatsHeadSet"><!--image with greyscale effect-->
+              </div>
+            </div>
+            <div class="col-md-8-auto">
+              <div class="card-body">
+                <h5 class="card-title">Beat Headphones</h5>
+                <p class="card-text">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Info</button>
+                  <button class="btn btn-info add" onclick="Add('Beat Headphones',800,document.getElementById('demo2').textContent,document.getElementById('headphone').value,document.getElementById('greyscale'))"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                  <button class="btn btn-light" onclick="Increase('headphone')"><i class="fa fa-plus"></i></button>
+                  <input type="text" value='0' id="headphone" style="width: 10%;">
+                  <button class="btn btn-light" onclick="Decrease('headphone')"><i class="fa fa-minus"></i></button>
+                  <div id="demo2" class="collapse">
+                    Beat Stereo headset. <br>
+                    7.1 virtual audio<br>
+                    On ear comfort
+                  </div>
+                </p>
+                <p class="card-text"><small class="text-muted">In Stock</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      <div class="card mb-3" style="max-width: 400px;">
+        <h5 class="card-title text-info">R 12000</h5>
+        <div class="row no-gutters justify-content-center auto">
+          <div class="col-md-4-auto">
+            <div class="zoom">
+              <img src="../images/phone.jpg" class="img-responsive" alt="Iphone" id="Iphone7">
+            </div>
+          </div>
+          <div class="col-md-8-auto">
+            <div class="card-body">
+              <h5 class="card-title">Iphone 7</h5>
+              <p class="card-text">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Info</button>
+                <button class="btn btn-info add" onclick="Add('IPhone 7',12000,document.getElementById('demo3').textContent,document.getElementById('Iphone').value,document.getElementById('Iphone7'))"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                <button class="btn btn-light" onclick="Increase('Iphone')"><i class="fa fa-plus"></i></button>
+                <input type="text" value='0' id="Iphone" style="width: 10%;">
+                <button class="btn btn-light" onclick="Decrease('Iphone')"><i class="fa fa-minus"></i></button>
+                <div id="demo3" class="collapse">
+                    126GB Storage <br>
+                    Perfect for apple fanboys<br>
+                    Now with no speaker!!
+                </div>
+              </p>
+              <p class="card-text"><small class="text-muted">In Stock</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4-auto">
+        <div class="card mb-3" style="max-width: 400px;">
+          <h5 class="card-title text-info">R 1000</h5>
+          <div class="row no-gutters justify-content-center auto">
+            <div class="col-md-4-auto">
+              <div class="zoom">
+                <img src="../images/backpack.jpg" class="img-responsive" alt="Backpack" id="back-pack-img">
+              </div>
+            </div>
+            <div class="col-md-8-auto">
+              <div class="card-body">
+                <h5 class="card-title">Hiking Back Pack</h5>
+                <p class="card-text">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">Info</button>
+                  <button class="btn btn-info add" onclick="Add('Hiking Backpack',1000,document.getElementById('demo4').textContent,document.getElementById('Backpack').value,document.getElementById('back-pack-img'))"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                  <button class="btn btn-light" onclick="Increase('Backpack')"><i class="fa fa-plus"></i></button>
+                  <input type="text" value='0' id="Backpack" style="width: 10%;">
+                  <button class="btn btn-light" onclick="Decrease('Backpack')"><i class="fa fa-minus"></i></button>
+                  
+                  <div id="demo4" class="collapse">
+                    First Ascend Backpack <br>
+                    Backsupport<br>
+                    High strength stritching 
+                  </div>
+                </p>
+                <p class="card-text"><small class="text-muted">In Stock</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4-auto">
+        <div class="card mb-3" style="max-width: 400px;">
+          <h5 class="card-title text-info">R 24000</h5>
+          <div class="row no-gutters justify-content-center auto">
+            <div class="col-md-4-auto">
+              <div class="zoom">
+                <img id="blur" src="../images/camera.jpg" class="img-responsive" id ="camera-img"alt="Camera"> <!--image with blur effect-->
+              </div>
+            </div>
+            <div class="col-md-8-auto">
+              <div class="card-body">
+                <h5 class="card-title">EDS 6D Canon</h5>
+                <p class="card-text">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5">Info</button>
+                  <button class="btn btn-info add" onclick="Add('Camera',24000,document.getElementById('demo5').textContent,document.getElementById('Camera').value,document.getElementById('blur'))"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button>
+                  <button class="btn btn-light" onclick="Increase('Camera')"><i class="fa fa-plus"></i></button>
+                  <input type="text" value='0' id="Camera" style="width: 10%;">
+                  <button class="btn btn-light" onclick="Decrease('Camera')"><i class="fa fa-minus"></i></button>
+                  <div id="demo5" class="collapse">
+                    Canon EDS 6D Canon <br>
+                    Comes with two batteries<br>
+                    Lens not included
+                  </div>
+                </p>
+                <p class="card-text"><small class="text-muted">In Stock</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+   
+  </div>
+
+  <footer class="page-footer font-small unique-color-dark pt-4" style="background-color: dimgray; padding-top:0;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="padding:0">© 2020 Copyright:
+      <a href="#"> example.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+
+  <script type="text/javascript" src="../Javascript/cart.js"></script>
+
+
+
+
+
+</body>
+
+</html>
